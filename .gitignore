@@ -1,0 +1,13 @@
+# Generated configuration, never committed.
+codespace-status.generated.json
+
+# Build artifacts.
+bin/
+vscode/bin/
+vscode/node_modules/
+*.vsix
+
+# Web UI assets copied into the extension at build time.
+vscode/media/index.html
+vscode/media/style.css
+vscode/media/app.js

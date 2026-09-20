@@ -1,0 +1,61 @@
+{
+  "name": "codespace-status",
+  "displayName": "codespace-status",
+  "description": "Resource usage for your GitHub codespaces, backed by the codespace-status CLI.",
+  "version": "0.1.0",
+  "publisher": "wh-chromium",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wh-chromium/codespace-status.git"
+  },
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "codespaceStatus.open",
+        "title": "Codespace Status: Open"
+      },
+      {
+        "command": "codespaceStatus.sync",
+        "title": "Codespace Status: Sync Codespaces"
+      },
+      {
+        "command": "codespaceStatus.select",
+        "title": "Codespace Status: Select Active Codespace"
+      },
+      {
+        "command": "codespaceStatus.permissions",
+        "title": "Codespace Status: Check Permissions"
+      },
+      {
+        "command": "codespaceStatus.auth",
+        "title": "Codespace Status: Start Authentication"
+      }
+    ],
+    "configuration": {
+      "title": "codespace-status",
+      "properties": {
+        "codespaceStatus.binaryPath": {
+          "type": "string",
+          "default": "",
+          "description": "Path to the codespace-status binary. Empty uses the binary packaged with the extension."
+        },
+        "codespaceStatus.pollMS": {
+          "type": "number",
+          "default": 2000,
+          "minimum": 500,
+          "maximum": 60000,
+          "description": "Sampling interval in milliseconds."
+        }
+      }
+    }
+  }
+}

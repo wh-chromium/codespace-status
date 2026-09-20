@@ -1,0 +1,43 @@
+/* Inside VS Code the panel follows the editor theme instead of the tool's own
+   light and dark palettes. */
+:root,
+html[data-theme="light"],
+html[data-theme="dark"] {
+  --line: var(--vscode-panel-border, var(--vscode-editorWidget-border, #3a3a3a));
+  --ink: var(--vscode-foreground);
+  --muted: var(--vscode-descriptionForeground);
+  --panel: var(--vscode-editorWidget-background, var(--vscode-editor-background));
+  --bg: var(--vscode-editor-background);
+  --plot: var(--vscode-editor-background);
+  --accent: var(--vscode-textLink-foreground, #3a6ea5);
+  --ok: var(--vscode-testing-iconPassed, #4a8f4a);
+  --warn: var(--vscode-editorWarning-foreground, #b08000);
+  --bad: var(--vscode-editorError-foreground, #a5563a);
+  --off: var(--vscode-descriptionForeground);
+}
+
+body {
+  font-family: var(--vscode-font-family);
+  font-size: var(--vscode-font-size);
+}
+
+.control {
+  background: var(--vscode-button-secondaryBackground, var(--vscode-button-background));
+  color: var(--vscode-button-secondaryForeground, var(--vscode-button-foreground));
+  border: 1px solid var(--line);
+}
+
+.tab.active {
+  background: var(--vscode-button-background);
+  color: var(--vscode-button-foreground);
+  border-color: var(--vscode-button-background);
+}
+
+.metric-value,
+.notice,
+.error {
+  font-family: var(--vscode-editor-font-family);
+}
+
+/* VS Code owns the colour scheme, so the theme toggle is not offered. */
+#theme { display: none; }

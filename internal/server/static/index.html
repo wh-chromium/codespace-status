@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>codespace-status</title>
+  <link rel="stylesheet" href="static/style.css" />
+</head>
+<body>
+  <header class="bar">
+    <h1>codespace-status</h1>
+    <span id="selected" class="muted">no codespace selected</span>
+    <span class="spacer"></span>
+    <label class="field" for="poll">poll</label>
+    <select id="poll" class="control">
+      <option value="500">0.5s</option>
+      <option value="1000">1s</option>
+      <option value="2000">2s</option>
+      <option value="5000">5s</option>
+      <option value="10000">10s</option>
+      <option value="30000">30s</option>
+      <option value="60000">60s</option>
+    </select>
+    <button id="sync" class="control" type="button">Sync</button>
+    <button id="perms" class="control" type="button">Check permissions</button>
+    <button id="auth" class="control" type="button">Start authentication</button>
+    <button id="theme" class="control" type="button">Dark</button>
+  </header>
+
+  <nav id="tabs" class="tabs" aria-label="select active codespace"></nav>
+
+  <pre id="notice" class="notice" hidden></pre>
+
+  <main id="cards"></main>
+
+  <script src="static/app.js"></script>
+</body>
+</html>
